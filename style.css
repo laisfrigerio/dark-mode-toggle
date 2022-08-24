@@ -1,0 +1,78 @@
+:root {
+  --gray-500: #545454;
+  --white: #ffffff;
+  --green: #1d887a;
+}
+
+.theme-light {
+  --background: #dddddd;
+  --theme-switch-shadow: #b7b7b7;
+}
+
+.theme-dark {
+  --background: #2e2d2d;
+}
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.theme-mode {
+  height: 40px;
+  position: relative;
+  width: 70px;
+}
+
+.theme-mode input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.theme-mode .slider {
+  background-color: var(--gray-500);
+  border-radius: 20px;
+  height: inherit;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: inherit;
+}
+
+.theme-mode .slider:before {
+  background: var(--white) url('images/moon.png') no-repeat center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--theme-switch-shadow);
+  content: "";
+  height: 40px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 40px;
+}
+
+.theme-mode input:checked + .slider {
+  background-color: var(--green);
+}
+
+.theme-mode input:checked + .slider:before {
+  background: var(--white) url('images/sunny.png') no-repeat center;
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
