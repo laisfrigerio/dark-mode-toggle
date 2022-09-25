@@ -1,6 +1,10 @@
-# ©️ DArk Mode Toggle
+# ©️ Dark Mode Toggle
 
 Simple switch to toggle between dark and light mode 💚
+
+<p align="center">
+  <a><img src="./screenshot.gif" alt="Switch to toggle between dark and light mode" title="Switch to toggle between dark and light mode"></a>
+</p>
 
 ## 👩 Author
 
